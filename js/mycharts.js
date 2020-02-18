@@ -68,8 +68,8 @@ myChart.setOption(option)
 
 
 $.get("https://lab.isaaclin.cn/nCoV/api/area?latest=1", function (res) {
-    console.log(res.results);
-    console.log(res.results[0].currentConfirmedCount + res.results[0].provinceShortName)
+    //console.log(res.results);
+    //console.log(res.results[0].currentConfirmedCount + res.results[0].provinceShortName)
 
     var province = []
     for (let i=0; i<res.results.length; i++){
@@ -78,8 +78,8 @@ $.get("https://lab.isaaclin.cn/nCoV/api/area?latest=1", function (res) {
             value: res.results[i].confirmedCount,
         })
     }
-    console.log(province)
-    console.log(666)
+    //console.log(province)
+    //console.log(666)
 
     myChart.hideLoading()
     myChart.setOption({
